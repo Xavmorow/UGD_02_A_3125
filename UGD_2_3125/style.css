@@ -1,0 +1,320 @@
+/* --- RESET & FONT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Animasi scroll halus */
+}
+
+/* --- BACKGROUND DIAGONAL STATIS --- */
+body {
+    /* Sudut kemiringan dan proporsi warna persis seperti gambar */
+    background: linear-gradient(108deg, #8A9A5B 42%, #2C3E2D 42%, #2C3E2D 58%, #D96C4A 58%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color: #000;
+}
+
+/* --- NAVIGATION BAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-home-icon {
+    background-color: white;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-contact {
+    background-color: white;
+    color: #000 !important;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: 800 !important;
+}
+
+/* --- LAYOUT UMUM SECTION --- */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.left-col {
+    width: 35%;
+    color: #111; /* Teks di area biru berwarna gelap */
+}
+
+.right-col {
+    width: 50%;
+    color: white; /* Teks di area merah berwarna putih */
+}
+
+/* --- TYPOGRAPHY LEFT COLUMN --- */
+.greeting {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.role {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.desc {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #222;
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    
+    /* 1. Tambahkan baris ini agar animasi naiknya mulus selama 0.3 detik */
+    transition: transform 0.3s ease; 
+}
+
+/* 2. Tambahkan blok kode baru ini di bawahnya */
+.social-links a:hover {
+    /* Angka minus (-) berarti ditarik ke ATAS sejauh 8 pixel */
+    transform: translateY(-8px); 
+}
+/* --- EFEK GLASSMORPHISM (Kartu Transparan) --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15); /* Transparan */
+    backdrop-filter: blur(12px); /* Efek Blur */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* --- ABOUT SECTION --- */
+.about-card {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.about-card h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.info-list p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* --- SKILLS SECTION --- */
+.glass-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill-box {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.3s ease; 
+}
+
+.skill-box:hover {
+    transform: translateY(-5px); 
+}
+
+.skill-box i {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.skill-box span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* --- PORTFOLIO SECTION --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 140px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.project-card p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* --- CONTACT SECTION --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    padding: 12px 0;
+    margin-bottom: 25px;
+    font-size: 15px;
+    outline: none;
+    font-weight: 500;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+}
+
+form textarea {
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background: white;
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* --- GAMBAR PROFIL HOME --- */
+.home-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    max-width: 80%;
+    border-radius: 20px;
+}
